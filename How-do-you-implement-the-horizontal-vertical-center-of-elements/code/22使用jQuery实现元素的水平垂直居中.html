@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		    *{
+		    	padding:0;
+		    	margin:0;
+		    }
+		    #box{
+		    	width:100px;
+		    	height:100px;
+		    	background:blue;
+		    	position:absolute;
+		    }
+	</style>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+	         /*
+			 *  @dec 利用jQuery实现元素水平垂直居中
+             *  @function getStyle 水平垂直居中元素
+             *  @event resize
+	         */
+		     $(function(){
+		     	 getStyle();
+		     	 function getStyle(){
+                       var oBox = $("#box"),
+			     	       oW = $(window).width(),   //获取浏览器的可视宽度
+			     	       oH  = $(window).height(), //获取浏览器的可视高度
+			     	       l = (oW-oBox.width())/2,  // 元素距离浏览器左边的距离
+			     	       t = (oH-oBox.height())/2; //元素距离浏览器右边的距离
+			     	   oBox.css({                    //赋值操作,left,top值
+			     	 	 left:l,
+			     	 	 top:t
+			     	  });
+		     	 }
+		     	 //当调整浏览器窗口的大小时,发生 resize 事件
+		     	 $(window).resize(function(){
+		     	 	   getStyle();
+				 })
+		     })
+	</script>
+</head>
+<body>
+		<div id="box"></div>
+</body>
+</html>

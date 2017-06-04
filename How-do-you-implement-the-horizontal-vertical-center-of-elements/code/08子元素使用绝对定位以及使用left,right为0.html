@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title>子元素使用绝对定位以及使用left,right为0</title>
+	<style type="text/css">
+			*{
+				padding:0;
+				margin:0;
+			}
+			.son{
+				position:absolute;  /*设置绝对定位*/
+				width:100px;        /*宽度固定*/
+				height:100px;
+				background:#abcdef;
+				top:0;
+				left:0;             /*设置top | left | right | bottom都等于0*/
+				right:0;
+				bottom:0;
+				margin:0 auto;
+			}
+	</style>
+</head>
+<body>
+		<div class="parent">
+			  <div class="son"></div>
+		</div>
+</body>
+</html>

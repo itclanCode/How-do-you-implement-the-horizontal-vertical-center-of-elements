@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>使用display:table,模拟表格效果</title>
+	<style type="text/css">
+		     *{
+		     	padding:0;
+		     	margin:0;
+		     }
+		     .parent{
+		     	display:table; /*让元素以表格形式渲染*/
+		        border:1px solid red;
+		        background:red;
+		        height:200px;
+		     }
+		     .son{
+		     	display:table-cell; /*让元素以表格的单元表格形式渲染*/
+		     	vertical-align:middle;/*使用元素的垂直对齐*/
+		    	background:yellow;
+		     }
+
+	</style>
+</head>
+<body>
+	   <div class="parent">
+	   	     <div class="son">contentcontentcontentcontentcontentcontentcontent</div>
+	   </div>
+</body>
+</html>

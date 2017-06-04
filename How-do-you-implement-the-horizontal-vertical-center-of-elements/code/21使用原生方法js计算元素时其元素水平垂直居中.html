@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		    *{
+		    	padding:0;
+		    	margin:0;
+		    }
+		    #box{
+		    	width:100px;
+		    	height:100px;
+		    	background:red;
+		    	position:absolute;  /*必须得设置绝对定位*/
+		    }
+	</style>
+</head>
+<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			  window.onload = function(){
+			  	   var oBox = document.getElementById("box"),
+                       left = (document.documentElement.clientWidth-oBox.offsetWidth)/2,
+                       top = (document.documentElement.clientHeight)/2;
+                   oBox.style.left = left+"px";
+                   oBox.style.top = top+"px";
+
+                   window.onresize = function(){
+					   var top = (document.documentElement.clientHeight-oBox.offsetHeight)/2,
+					       left = (document.documentElement.clientWidth-oBox.offsetWidth)/2; 
+	                   oBox.style.top = top+"px";
+				       oBox.style.left = left+"px";
+	                }
+			  }
+			 
+	</script>
+</body>
+</html>

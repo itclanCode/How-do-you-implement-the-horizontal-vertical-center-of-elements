@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+    <style type="text/css">
+    	    *{
+    	    	padding:0;
+    	    	margin:0;
+    	    }
+    	    html,body{height:100%;}
+    	    .box{
+    	    	/*float:left;*/
+    	    	height:50%;  /*相对父元素的高度的50%*/
+    	    	margin-bottom:-120px;
+    	    }
+    	    .content{
+    	    	clear:both;/*清除浮动*/
+    	    	width:240px;
+    	    	height:240px;
+    	    	position:relative;/*只能用相对定位*/
+    	    	background:green;
+    	    }
+    </style>
+</head>
+<body>
+		<div class="box"></div>
+		<div class="content">Content</div>
+</body>
+</html>

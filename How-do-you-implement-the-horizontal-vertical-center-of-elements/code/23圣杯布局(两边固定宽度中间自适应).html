@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>圣杯布局(两边宽度固定,中间自适应)左中右结构</title>
+    <style type="text/css">
+    	    *{
+    	    	padding:0;
+    	    	margin:0;
+    	    }
+		    .left{
+		     	width:200px;        /*两边固定宽度,中间自适应*/
+		     	height:600px;       /*高度可以不设,由内容填充*/
+		     	position:absolute;
+		     	left:0;
+		     	top:0;
+		     	background:red;
+		     }
+		     .center{
+		     	width:100%;        /*宽度不固定*/
+		     	height:600px;
+		     	background:orange;
+		     	margin:0 200px;
+		     }
+		     .right{
+		     	width:200px;       /*两边固定宽度,中间自适应*/
+		     	height:600px;      /*高度可以不设,由内容填充*/
+		     	position:absolute;
+		     	right:0;
+		     	top:0;
+		     	background:green;
+		     }
+    </style>
+</head>
+<body>
+		<div class="left">左边</div>
+		<div class="center">中间</div>
+		<div class="right">右边</div>
+</body>
+</html>

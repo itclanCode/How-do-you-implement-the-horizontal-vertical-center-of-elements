@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>行内元素实现水平居中</title>
+	<!-- 
+         行内元素:自身不具备宽度,高度,也就是说设置宽度,高度,不起作用,由自身内容撑大,比如:a,b,img,input,select,strong,i,span
+         水平居中:给父元素设置text-align:center
+	 -->
+	 <style type="text/css">
+	 	       *{
+	 	       	 padding:0;
+	 	       	 margin:0;
+	 	       }
+	 	       .spanParent,.imgParent{
+	 	       	  width:100%;
+	 	       	  text-align:center;   /*文本水平居中,给父级元素设定*/
+	 	       	  border-bottom:1px solid #ccc;
+	 	       }
+	 </style>
+</head>
+<body>
+       <div class="spanParent">
+       	     <span>span等行内元素水平居中</span>
+       </div>
+       <div class="imgParent">
+       	      <img src="img/QrCode.jpg" alt="itclanQrCode" />
+       </div>
+</body>
+</html>

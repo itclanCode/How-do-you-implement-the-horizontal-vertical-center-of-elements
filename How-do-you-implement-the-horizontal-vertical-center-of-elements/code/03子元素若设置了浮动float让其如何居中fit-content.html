@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>子元素设置了浮动,让子元素如何居中</title>
+	<style type="text/css">
+		     *{
+		     	padding:0;
+		     	margin:0;
+		     }
+		     ul,li{
+		     	list-style:none;
+		     }
+		     .parent{
+		     	width:100%;
+		     	width:-moz-fit-content;
+		     	width:-webkit-fit-content;
+		     	width:fit-content;   /*父元素宽度设置fit-content,高度是没有这样的写法的*/
+		     	margin:0 auto;     /*注意只设置得了水平居中,此方法,垂直居中无法*/
+		     }
+		     li{
+		     	float:left;    /*子元素设置了浮动*/
+		     	margin:0 5px 0;
+		     }
+	</style>
+</head>
+<body>
+		<ul class="parent">
+			<li>随笔川迹</li>
+			<li>itclan</li>
+			<li>个人简介</li>
+			<li>联系地止</li>
+		</ul>
+</body>
+</html>
